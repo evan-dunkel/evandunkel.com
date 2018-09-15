@@ -187,7 +187,6 @@ img {
 #work-1 {
   margin-left: 20vmax;
   margin-right: 20vmax;
-
 }
 #work-6 {
   padding-bottom: 16.5vh;
@@ -214,6 +213,13 @@ img {
   .small-nav-left p {
     margin: 0;
   }
+  #work-1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+  }
+  h4 {
+    font-size: 7.5vmin;
+  }
 }
 
 /* Mobile (iPhone optimized) */
@@ -226,6 +232,13 @@ img {
     margin-left: 3%;
     margin-right: 3%;
   }
+  #work-1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+  }
+  h4 {
+    font-size: 7.5vmin;
+  }
 }
 
 /* Mobile (iPhone Plus optimized) */
@@ -237,6 +250,13 @@ img {
   #work-div {
     margin-left: 3%;
     margin-right: 3%;
+  }
+  #work-1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+  }
+  h4 {
+    font-size: 8vmin;
   }
 }
 
@@ -258,6 +278,10 @@ img {
   }
   #work-6 {
     padding-bottom: 6vh;
+  }
+  #work-1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
   }
 }
 
