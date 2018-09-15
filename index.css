@@ -31,10 +31,10 @@ img {
 }
 
 .bg-transition {
-  transition: background 2s;
+  transition: background 1s;
 }
 
-.bg-highlight {
+.highlighter {
   background-color: #e0c285; 
 }
 

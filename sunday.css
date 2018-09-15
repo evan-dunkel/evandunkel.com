@@ -25,6 +25,14 @@
   line-height: normal;
 }
 
+.bg-transition {
+  transition: background 1s;
+}
+
+.highlighter {
+  background-color: #e0c285; 
+}
+
 /* -- Universal Styles -- */
 
 body {

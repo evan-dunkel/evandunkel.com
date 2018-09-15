@@ -18,7 +18,7 @@
       <p>
         <a id="work-link" href="">Work</a>
         —
-        <a onclick="highlightTalk()" id="talk-link" href="#talk">Talk</a>
+        <a id="talk-link" href="#talk">Talk</a>
       </p>
     </div>
   </div>
@@ -90,6 +90,24 @@
   <script>
   $(document).ready(relativeSpacer());
 
+  $('#talk-link').on('click', function () {
+    setTimeout(function(){
+      $("#talk-email").addClass("highlighter");
+      $("#talk-phone").addClass("highlighter");
+    }, 50);
+
+    setTimeout(function(){
+      $("#talk-email").addClass("bg-transition");
+      $("#talk-phone").addClass("bg-transition");
+
+      $("#talk-email").removeClass("highlighter");
+      $("#talk-phone").removeClass("highlighter");
+    }, 500);
+
+    $("#talk-email").removeClass("bg-transition");
+    $("#talk-phone").removeClass("bg-transition");
+  });
+
   function relativeSpacer() {
     $('#header').css('width', $(window).width() - ($('#header').css('margin-left').slice(0,-2)*2) + 'px');
     $('#about-text-constrainer').css('width', $(window).width() - ($('#about-text-constrainer').css('margin-left').slice(0,-2)) - ($('#about-text-constrainer').css('margin-right').slice(0,-2)) + 'px');
@@ -100,21 +118,6 @@
     $('.work-date').each(function(i, obj) {
       $(obj).css('line-height', $('#work-title-1').height() + 'px');
     });
-  }
-
-  function highlightTalk() {
-    $("talk-email").addClass("highlighter");
-    $("talk-phone").addClass("highlighter");
-
-    $("talk-email").addClass("bg-transition");
-    $("talk-phone").addClass("bg-transition");
-
-    $("talk-email").removeClass("highlighter");
-    $("talk-phone").removeClass("highlighter");
-
-    $("talk-email").removeClass("bg-transition");
-    $("talk-phone").removeClass("bg-transition");
-
   }
   </script>
 </body>
