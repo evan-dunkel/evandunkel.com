@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,300,400|Roboto:100,300,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="content.css">
+  <title>Evan Dunkel</title>
+</head>
+<body onresize="relativeSpacer()">
+  <div id="header" class="header">
+    <div class="nav-left">
+      <p>
+        <a href="http://evandunkel.com">Evan Dunkel</a>
+      </p>
+    </div>
+    <div class="nav-right">
+      <p>
+        <a id="work-link" href="index.html">Work</a>
+        —
+        <a id="talk-link" href="#talk">Talk</a>
+      </p>
+    </div>
+  </div>
+  <div id="about-div" class="about">
+    <div id="about-text-center" class="about-text-center">
+      <h1 id="project-title">Portraits of Nana</h1>
+      <p id="project-description">Shot on Canon T2i. Film and TV project at Boston University.</p>
+      <p id="project-description-date">March 2018</p>
+    </div>
+  </div>
+
+  <div id="work-div">
+
+    <div id="work-1" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-1" class="work-title">Dimensionality</p>
+        <p id="work-date-1" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-1.jpg">
+    </div>
+
+    <div id="work-2" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-2" class="work-title">Detail</p>
+        <p id="work-date-2" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-2.jpg">
+    </div>
+
+    <div id="work-3" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-3" class="work-title">Edge of frame</p>
+        <p id="work-date-3" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-3.jpg">
+    </div>
+
+    <div id="work-4" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-4" class="work-title">Unnatural light source</p>
+        <p id="work-date-4" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-4.jpg">
+    </div>
+
+    <div id="work-5" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-5" class="work-title">Opposite colors</p>
+        <p id="work-date-5" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-5.jpg">
+    </div>
+
+    <div id="work-6" class="work-block">
+      <div class="work-text-div">
+        <p id="work-title-6" class="work-title">Warm colors</p>
+        <p id="work-date-6" class="work-date"></p>
+      </div>
+      <img class="image" src="img/portraits/work-6.jpg">
+    </div>
+
+  </div>
+
+  <div id="talk" class="talk">
+    <div id="talk-email" class="nav-left small-nav-left">
+      <p>
+        <a href="mailto:evandunkel@pm.me">evandunkel@pm.me</a>
+      </p>
+    </div>
+    <div class="nav-right">
+      <p>
+        <a id="talk-link" href="tel:+1-469-732-7309">469-732-7309</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(relativeSpacer());
+
+  function relativeSpacer() {
+    $('#header').css('width', $(window).width() - ($('#header').css('margin-left').slice(0,-2)*2) + 'px');
+    $('#work-div').css('padding-top', (($(window).height() / 3) * 2.45) + 'px');
+    $('.work-text-div').each(function(i, obj) {
+      $(obj).css('width', $(obj).parent().width() - ($(obj).css('margin-left').slice(0,-2) * 2)  + 'px');
+    });
+    $('.work-date').each(function(i, obj) {
+      $(obj).css('line-height', $('#work-title-1').height() + 'px');
+    });
+    $('.image, .work-text-div').hover(function() {
+      $('.work-text-div').addClass('visible');
+    },
+    function() {
+      $('.work-text-div').removeClass('visible');
+    });
+  }
+
+  $(window).scroll(function() {
+    var homeTop = $(window).scrollTop();
+
+    $("#about-div").each(function() {
+      var height = 100;
+      var offset = 200;
+      var opacity = (height - homeTop + offset) / height;
+
+      $(this).css("opacity", opacity);
+    });
+  });
+
+  </script>
+</body>

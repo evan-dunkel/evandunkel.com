@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="resume.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <title>Evan Dunkel</title>
+</head>
+<body onload="descriptionMargin()" onresize="descriptionMargin()">
+  <div class="container-fluid grow-limit">
+    <div class="font-weight-bold name">
+      Evan
+    </div>
+    <div class="font-weight-bold name">
+      Dunkel
+    </div>
+    <div id="contact" class="font-weight-bold h4">
+      <div><a class="contact" href="mailto:evandunkel@gmail.com">evandunkel@gmail.com</a></div>
+      <div><a class="contact" href="mailto:evandunk@bu.edu">evandunk@bu.edu</a></div>
+      <div><a class="contact" href="tel:+1-469-732-7309">469-732-7309</a></div>
+    </div>
+    <div id="school" class="resume-elements">
+      <span class="light-font">studying </span><span class="font-weight-bold">Film & TV</span><span class="light-font"> and </span><span class="font-weight-bold">Computer Science</span><span class="light-font"> at </span><span class="font-weight-bold">Boston University</span>
+    </div>
+    <div class="skills resume-elements">
+      <div><span class="light-font">experienced with: </span><span class="font-weight-bold">After Effects</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">Premiere Pro</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">Photoshop</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">HTML + CSS</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">Python</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">Bash</span></div>
+      <div><span class="invisible-font">experienced with: </span><span class="font-weight-bold">Linux</span></div>
+    </div>
+    <div class="skills resume-elements">
+      <div><span class="light-font">some experience: </span><span class="font-weight-bold">Blender</span></div>
+      <div><span class="invisible-font">some experience: </span><span class="font-weight-bold">Java</span></div>
+    </div>
+    <div id="previous-work" class="resume-elements">
+      <div id="previous-header"><span class="light-font">previous work: </span></div>
+      <a target="_blank" href="https://www.amazon.com/Cupology/dp/B01DWKO3MA" class="font-weight-bold underline">Cupology</a><span class="invisible-font">S</span><span class="light-font years">2017</span>
+      <p id="cupology-blurb" class="paragraph">Created mug designs using Photoshop.</p>
+      <div id="wedding-header-div"><a target="_blank" href="img/filter.png" class="font-weight-bold underline">Wedding Snapchat Filters</a><span class="invisible-font">S</span><span class="light-font years">2016</span></div>
+      <p id="wedding-blurb" class="paragraph">Adjusted design based on client requests, made in Photoshop.</p>
+      <span class="invisible-font">previous work: </span><span class="font-weight-bold">Chipotle</span><span class="invisible-font">S</span><span class="light-font years">2016</span>
+      <p id="chipotle-blurb" class="paragraph">Part time job.</p>
+      <div id="carroll-header-div"><span class="font-weight-bold">Carroll Communications Internship</span><span class="invisible-font">S</span><span class="light-font years">2014</span></div>
+      <p id="carroll-blurb" class="paragraph">Photographer for Carroll ISD sports events.</p>
+    </div>
+    <div id="recognition" class="resume-elements">
+      <div id="recognition-header"><span class="light-font">recognition: </span></div>
+      <span class="font-weight-bold">National Honor Society</span>
+      <p id="nhs-blurb" class="paragraph">Based on academic merit.</p>
+      <div id="nshs-header-div"><span class="font-weight-bold">National Spanish Honor Society</span></div>
+      <p id="nshs-blurb" class="paragraph">Studied Spanish language and culture for five years.</p>
+      <div id="cxc-header-div"><span class="font-weight-bold">Carroll Cross Country</span><span class="invisible-font">S</span><span class="light-font years">2012-2017</span></div>
+      <div id="run-blurb-div"><span id="inline-block" class="paragraph">Ranked fourth on high school cross country team <a target="_blank" href="http://nxn.runnerspace.com/eprofile.php?event_id=13&title_id=187&do=title&folder_id=1159#table_1" class="paragraph natural-underline inline-block">ranked 11th in the nation</a><p class="paragraph inline-block">.</p></span></div>
+      <div id="dragon-header-div"><span class="font-weight-bold">Anchor and Producer</span><span class="invisible-font">S</span><span class="light-font years">2016-2017</span></div>
+      <p id="dragon-blurb" class="paragraph">Hosted and filmed segments for school news show at Carroll Senior High School.</p>
+      <div id="vase-title"><span class="font-weight-bold">Texas Visual Scholastic Art Expedition</span><span class="invisible-font">S</span><span class="light-font years">2016-2017</span></div>
+      <p id="vase-blurb" class="paragraph">Submitted three artworks reaching finalist level.</p>
+    </div>
+  </div>
+  <script>
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async function descriptionMargin() {
+    if (descriptionMargin.calledTimes >= 1) {
+      $('.underline').addClass('underline-2')
+      $('.name').addClass('name-2')
+      $('.grow-limit').addClass('grow-limit-2')
+      $('.resume-elements').addClass('resume-elements-2')
+      $('.paragraph').addClass('paragraph-2')
+      $('.years').addClass('years-2')
+      await sleep(401);
+    }
+    descriptionMargin.calledTimes += 1;
+    var titleWidth = document.getElementById('previous-header').getBoundingClientRect().width;
+    document.getElementById('cupology-blurb').style.marginLeft = titleWidth + "px";
+    document.getElementById('wedding-header-div').style.marginLeft = titleWidth + "px";
+    document.getElementById('wedding-blurb').style.marginLeft = titleWidth + "px";
+    document.getElementById('chipotle-blurb').style.marginLeft = titleWidth + "px";
+    document.getElementById('carroll-blurb').style.marginLeft = titleWidth + "px";
+    document.getElementById('carroll-header-div').style.marginLeft = titleWidth + "px";
+    var titleWidth1 = document.getElementById('recognition-header').getBoundingClientRect().width;
+    document.getElementById('nhs-blurb').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('nshs-header-div').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('nshs-blurb').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('cxc-header-div').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('run-blurb-div').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('dragon-header-div').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('dragon-blurb').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('vase-title').style.marginLeft = titleWidth1 + "px";
+    document.getElementById('vase-blurb').style.marginLeft = titleWidth1 + "px";
+  }
+  descriptionMargin.calledTimes = 0;
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
