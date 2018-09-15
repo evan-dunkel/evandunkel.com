@@ -300,6 +300,13 @@ img {
     padding-left: 21%;
     padding-bottom: 7.5vh;
   }
+  #work-1 {
+    margin-left: 4vmin;
+    margin-right: 4vmin;
+  }
+  h4 {
+    font-size: 6vmin;
+  }
 }
 
 /* Large Tablet / Small Laptop */
@@ -327,6 +334,13 @@ img {
     width: 58%;
     padding-left: 21%;
     padding-bottom: 7.5vh;
+  }
+  #work-1 {
+    margin-left: 9vmin;
+    margin-right: 9vmin;
+  }
+  h4 {
+    font-size: 6vmin;
   }
 }
 
@@ -359,6 +373,10 @@ img {
   }
   .work-date {
     font-size: 32px;
+  }
+  #work-1 {
+    margin-left: 18vmax;
+    margin-right: 18vmax;
   }
 }
 
